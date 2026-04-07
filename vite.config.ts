@@ -5,6 +5,7 @@ import type { ParseOptions } from 'terser'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/frontend-challenge/',
   server: {
     cors: true,
   },
