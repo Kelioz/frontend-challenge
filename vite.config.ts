@@ -17,6 +17,7 @@ export default defineConfig({
     },
   },
   build: {
+    sourcemap: false,
     minify: 'terser',
     terserOptions: {
       compress: {
