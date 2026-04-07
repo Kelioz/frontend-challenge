@@ -1,23 +1,28 @@
 @use 'variables';
+
 .root {
+  cursor: pointer;
+
   display: flex;
-  text-align: center;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
   height: 64px;
-  font-size: 14px;
   padding-inline: 20px;
 
+  font-size: 14px;
+  text-align: center;
+
   background-color: variables.$basic-500;
-  cursor: pointer;
 
   &:hover {
     background-color: variables.$basic-600;
   }
 
   &__text {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgb(255 255 255 / 70%);
   }
+
   &__textSelected {
     color: #fff;
   }

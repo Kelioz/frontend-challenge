@@ -47,7 +47,7 @@ export type ImagesListSearchOrRandomParams = {
   limit?: number
 }
 
-export type ImagesListSearchOrRandom200 = { [key: string]: unknown }
+export type ImagesListSearchOrRandom200 = ImageItem[]
 
 export type ImagesListSearchOrRandom401 = { [key: string]: unknown }
 
@@ -109,10 +109,26 @@ export type GetBreedsSearchParams = {
    */
   attach_image?: number
 }
-
+export type ImageFavoriteItem = {
+  id: string
+  image_id: string
+  user_id: string
+  sub_id: string
+  created_at: string
+  image: {
+    id: string
+    url: string
+  }
+}
+export type ImageItem = {
+  id: string
+  url: string
+  width: number
+  height: number
+}
 export type GetBreedsSearch200 = { [key: string]: unknown }
 
-export type GetFavourites200 = { [key: string]: unknown }
+export type GetFavourites200 = ImageFavoriteItem[]
 
 export type PostFavouritesBody = { [key: string]: unknown }
 

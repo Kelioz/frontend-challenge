@@ -1,6 +1,7 @@
 @use 'variables';
+
 .root {
   display: flex;
-  background-color: variables.$basic-500;
   padding-left: 52px;
+  background-color: variables.$basic-500;
 }

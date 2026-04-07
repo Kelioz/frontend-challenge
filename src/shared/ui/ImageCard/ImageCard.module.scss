@@ -1,0 +1,37 @@
+.root {
+  position: relative;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow:
+      0px 9px 18px 0px rgba(0, 0, 0, 0.18),
+      0px 6px 5px 0px rgba(0, 0, 0, 0.24);
+
+    .root__favorite {
+      display: block;
+      cursor: pointer;
+      position: absolute;
+      right: 8px;
+      bottom: 8px;
+    }
+  }
+  &__image {
+    display: block;
+  }
+
+  &__favorite {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+  }
+
+  &__icon {
+    color: #ff3a00;
+
+    &:hover {
+      color: #f24e1e;
+    }
+  }
+}

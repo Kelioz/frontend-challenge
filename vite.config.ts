@@ -5,6 +5,9 @@ import type { ParseOptions } from 'terser'
 
 // https://vite.dev/config/
 export default defineConfig({
+  server: {
+    cors: true,
+  },
   css: {
     preprocessorOptions: {
       scss: {
@@ -22,8 +25,16 @@ export default defineConfig({
     } as ParseOptions,
     rollupOptions: {
       output: {
-        manualChunks: {
-          queries: ['@tanstack/react-query', 'axios'],
+        manualChunks: (id) => {
+          if (
+            id.includes('node_modules/@tanstack/react-query') ||
+            id.includes('node_modules/axios')
+          ) {
+            return 'queries'
+          }
+          if (id.includes('node_modules')) {
+            return 'vendor'
+          }
         },
       },
     },
